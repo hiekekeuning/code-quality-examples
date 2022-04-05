@@ -80,6 +80,6 @@ class programmingStudent:
     def printInfo(self):
         print (f"I am {self.name}.")
 
-st1 = ProgrammingStudent('Alex')
-st1.print_info();
+st1 = programmingStudent('Alex')
+st1.printInfo();
 
