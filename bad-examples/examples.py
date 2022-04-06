@@ -17,10 +17,11 @@ def get_loan():
     print('Getting a loan')
 
 
-if is_expensive(1000):
+if is_expensive(1000) == True:
     get_loan()
 else:
-    print('cheap')
+    if not is_expensive(1000):
+        print('cheap')
 
 # example c
 
