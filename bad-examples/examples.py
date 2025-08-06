@@ -1,10 +1,8 @@
 
 # example a
 def is_expensive(price):
-    if price > 100:
-        return True
-    else:
-        return False
+    return price > 100
+
 
 
 print(is_expensive(1000))
@@ -17,25 +15,20 @@ def get_loan():
     print('Getting a loan')
 
 
-if is_expensive(1000) == True:
+if is_expensive(1000):
     get_loan()
 else:
-    if not is_expensive(1000):
-        print('cheap')
+    print('cheap')
 
 # example c
 
 target = 1000
 start = 25
 years = 0
-reached_target = False
-while not reached_target:
-    start = start + (start * 0.01)
-    if start >= target:
-        years += 1
-        reached_target = True
-    else:
-        years += 1
+INTEREST = 0.01
+while start < target:
+    start += (start * INTEREST)
+    years += 1
 
 print(years)
 
